@@ -1,17 +1,26 @@
-const apiKey = "88cffcd2641b26de761be6aef5fa213f";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=London&appid=88cffcd2641b26de761be6aef5fa213f";
+const apiKey = "915802b5ef100d63ebc53e329d415fdd";
+const apiUrl = "https://api.openweathermap.org/data/2.5/forecast?q='+newName.value+'&units=imperial&appid=915802b5ef100d63ebc53e329d415fdd";
 var city;
-const searchInput = document.querySelector("#search-bar");
+const searchInput = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
-const currentCity = document.querySelector("#current-city");
 const currentTemp = document.querySelector("#current-temp");
 
+function getCity(){
+    const newName = document.querySelector("#search-input");
+    const currentCity = document.querySelector("#current-city");
+    currentCity.innerHTML = newName.value;
+}
 
 // Function to get the current weather
-function getWeather() {
+function getWeather(city) {
     fetch(apiUrl)
         .then(response => response.json())
-        .then(data => {console.log(data);})
+        .then(data => console.log(data));
 }
 
 getWeather();
+
+searchBtn.addEventListener('click', () => {
+    const city = searchInput.value;
+    getWeather(city);
+  });

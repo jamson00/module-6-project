@@ -3,52 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/86d6aaaef6.js" crossorigin="anonymous"></script>
     <title>Weather app</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/scipt.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.classless.min.css"
+    />
 </head>
 <body>
     <div class ="card">
         <div class="search"></div>
-            <input id="search-bar" type="text" class="search-bar">
-            <button>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>  
-            <div class="Weather">
+        <input id="search-input" type="text" class="search-bar">
+        <button id="search-btn">Search</button>
+        <div class="Weather">
             <h2 id="current-city" class="City">City</h2>
-
-                <h2 class="date">date</h2>
-                <div class="icon">Icon</div>
-                <div id="current-temp" class="description">description</div>
-                <div class="humidity">humidity</div>
             
-                <h2 class="date">date</h2>
-                <div class="icon">Icon</div>
-                <div id="current-temp" class="description">description</div>
-                <div class="humidity">humidity</div>
-
-                <h2 class="date">date</h2>
-                <div class="icon">Icon</div>
-                <div id="current-temp" class="description">description</div>
-                <div class="humidity">humidity</div>
-
-                <h2 class="date">date</h2>
-                <div class="icon">Icon</div>
-                <div id="current-temp" class="description">description</div>
-                <div class="humidity">humidity</div>
-
-                <h2 class="date">date</h2>
-                <div class="icon">Icon</div>
-                <div id="current-temp" class="description">description</div>
-                <div class="humidity">humidity</div>
-    </div>
-    
+            <h2 class="date">weather info</h2>
+            
+        </div>
+        
+    </body>
     <div>
         <div class="history" id="history-container"></div>
         <h2>History data</h2>
     </div>
-</body>
+    <script src="assets/js/scipt.js"></script>
 </html>
