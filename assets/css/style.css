@@ -16,3 +16,14 @@ body {
     margin: 1em;
     border: black 1px solid;
 }
+
+.history {
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    width: 50%;
+    max-width: 420px;
+    margin: 1em;
+    border: black 1px solid;
+}
+
